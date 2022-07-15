@@ -10,7 +10,7 @@ export PATH="$HOME/.local/bin:$PATH"
 
 export ZSH=$HOME/.oh-my-zsh
 
-plugins=(autojump colorize colored-man-pages docker-compose git history ssh-agent)
+plugins=(colorize colored-man-pages docker-compose git history ssh-agent)
 ZSH_THEME=juanghurtado
 COMPLETION_WAITING_DOTS="true"
 
@@ -22,10 +22,6 @@ unsetopt beep
 
 zstyle :omz:plugins:ssh-agent lazy yes
 
-if [[ -s /usr/share/autojump/autojump.sh ]]; then
-  . /usr/share/autojump/autojump.sh
-fi
-
 # -----------------------------------------------------------------------------
 # Programming Environments
 # -----------------------------------------------------------------------------
@@ -36,9 +32,6 @@ export PATH="$HOME/.nodenv/bin:$PATH"
 if command -v nodenv 1>/dev/null 2>&1; then
   eval "$(nodenv init -)"
 fi
-
-# yarn
-export PATH="$(yarn global bin):$PATH"
 
 # -----------------------------------------------------------------------------
 # Post Setup
